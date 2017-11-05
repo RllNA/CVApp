@@ -1,0 +1,24 @@
+<ion-menu side="right" [content]="content">
+  <ion-header>
+  
+    <ion-navbar>
+      <ion-title>Menu</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  <ion-list>
+    <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+      {{p.title}}
+    </button>
+    <!--Calling for the log out function [color]="isActive(p)-->
+  <button ion-button full color="light" (click)="logoutUser()">Log out</button>
+  
+  </ion-list>
+  </ion-content>
+  </ion-menu>
+  
+  <!--Navigation-->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

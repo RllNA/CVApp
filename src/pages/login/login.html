@@ -1,0 +1,28 @@
+<ion-header>
+  
+    <ion-navbar>
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <h1 style="text-align:center;">CV</h1>
+
+      <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" [(ngModel)]="user.email" ></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+  
+  <!--calling for doLogin() function from button-->
+  <button ion-button large block color="dark" outline round (click)="loginUser(user)">Login</button>
+  <!--calling for the doRegister() function from button-->
+  <button ion-button small full color="dark" clear (click)="doRegister()">Register</button>
+  
+  </ion-content>
